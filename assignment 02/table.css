@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+    border: 1.5px solid;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1.5px solid;
+    text-align: center;
+}
+
+th {
+    background-color: #a55eea;
+
+}
+
+span {
+    font-weight: 600;
+}
+
+.lab {
+    border-bottom: 1.5px solid;
+
+}
+
+.odd {
+    background-color: #e84118;
+    /* background-color: red; */
+
+}
+
+.even {
+    background-color: #d1d8e0;
+    /* background-color: gray; */
+}

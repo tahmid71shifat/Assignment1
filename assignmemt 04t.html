@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Five Countries and Capitals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #e6b01b;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Five Countries and Capitals</h1>
+    </header>
+    <div class="container">
+        <label for="countries">Select a country:</label>
+        <select id="countries" onchange="displayCapital()">
+            <option value="">Select a country</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="India">India</option>
+            <option value="Srilanka">Srilanka</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="United Kingdom">United Kingdom</option>
+        </select>
+        <p id="capital"></p>
+    </div>
+
+    <script>
+        function displayCapital() 
+        {
+            const selectBox = document.getElementById("countries");
+            const selectedCountry = selectBox.value;
+            const capitalParagraph = document.getElementById("capital");
+
+            const capitals = 
+            {
+                Bangladesh: "Dhaka",
+                India: "Delhi",
+                Srilanka: "Colombo",
+                Pakistan: "Islamabad",
+                "United Kingdom": "London",
+            };
+            if (selectedCountry in capitals) 
+            {
+                capitalParagraph.textContent = `Capital: ${capitals[selectedCountry]}`;
+            } 
+            else 
+            {
+                capitalParagraph.textContent = "Please select a valid country.";
+            }
+        }
+    </script>
+</body>
+</html>
